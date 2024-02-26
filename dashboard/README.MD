@@ -1,7 +1,6 @@
 ## dashboard 构建指南
 
 ### 1. 通过 `helm` 安装 `metrics-server`，并且创建 `metrics-server` 命名空间
-```shell
 
 通过 `helm` 安装 `kubernetes-dashboard`，并且创建 `kubernetes-dashboard` 命名空间
 ```shell
