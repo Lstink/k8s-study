@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-test
+  labels:
+    app: http-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: http-test
+  template:
+    metadata:
+      name: http-test
+      labels:
+        app: http-test
+    spec:
+      containers:
+        - name: http-test
+          image: lstink/http-test:v1.0.0 # 这里要更改成你自己的镜像地址
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
